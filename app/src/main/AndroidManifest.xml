@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Hydroponics"
         tools:targetApi="31">
         <activity
+            android:name=".ScrollActivity"
+            android:exported="false" />
+        <activity
             android:name=".UpdateParameters"
             android:exported="false" />
         <activity
