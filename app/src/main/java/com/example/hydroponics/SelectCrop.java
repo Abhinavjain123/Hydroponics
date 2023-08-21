@@ -11,17 +11,27 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class SelectCrop extends AppCompatActivity {
 
-    FloatingActionButton nextButton;
+    FloatingActionButton addButton;
+    Button nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_crop);
 
-        nextButton = (FloatingActionButton) findViewById(R.id.add_button);
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        addButton = (FloatingActionButton) findViewById(R.id.add_button);
+        nextButton = (Button) findViewById(R.id.nextButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), AddCrop.class);
+                startActivity(i);
+            }
+        });
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), UpdateParameters.class);
                 startActivity(i);
             }
         });
