@@ -12,7 +12,10 @@
         android:theme="@style/Theme.Hydroponics"
         tools:targetApi="31">
         <activity
-            android:name=".SecondActivity"
+            android:name=".AddCrop"
+            android:exported="false" />
+        <activity
+            android:name=".SelectCrop"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

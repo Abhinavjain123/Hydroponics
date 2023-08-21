@@ -7,19 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-    Button homeButton;
+public class SelectCrop extends AppCompatActivity {
+
+    FloatingActionButton nextButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_select_crop);
 
-        homeButton = (Button) findViewById(R.id.homeButton);
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        nextButton = (FloatingActionButton) findViewById(R.id.add_button);
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), SelectCrop.class);
+                Intent i = new Intent(getApplicationContext(), AddCrop.class);
                 startActivity(i);
             }
         });

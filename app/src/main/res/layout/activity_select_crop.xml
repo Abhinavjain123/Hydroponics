@@ -2,27 +2,29 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/drawable_gradient_animation_list"
-    tools:context=".SecondActivity">
+    tools:context=".SelectCrop">
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.431">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/text_logo"
-            android:textColor="@color/colorAccent"
+            android:text="@string/choose_crop"
+            android:textColor="@color/green_accent"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -34,7 +36,8 @@
             android:layout_margin="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/green_accent">
 
 
             <AutoCompleteTextView
@@ -44,7 +47,8 @@
                 android:layout_weight="1"
                 android:inputType="none"
                 android:text="Choose Vegetables"
-                />
+                android:textColor="@color/green_accent"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,10 +69,35 @@
                 android:layout_weight="1"
                 android:inputType="none"
                 android:text="Choose Age"
-                />
+                android:textColor="@color/green_accent"
+                android:textSize="20sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/next_button"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            app:backgroundTint="@color/green_accent" />
+
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/green_accent"
+        android:src = "@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.958"
+        app:tint="@color/white" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
