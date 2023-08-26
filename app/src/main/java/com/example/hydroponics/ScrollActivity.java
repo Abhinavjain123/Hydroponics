@@ -2,8 +2,10 @@ package com.example.hydroponics;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -45,7 +47,7 @@ public class ScrollActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                    addCard(editName.getText().toString());
+                addCard(editName.getText().toString());
 
             }
         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -61,6 +63,7 @@ public class ScrollActivity extends AppCompatActivity {
         View view = getLayoutInflater().inflate(R.layout.plant,null);
         TextView nameView=view.findViewById(R.id.name);
         Button delete=view.findViewById(R.id.delete);
+        CardView card = view.findViewById(R.id.card);
 
         nameView.setText(name);
 
@@ -68,6 +71,13 @@ public class ScrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 layout.removeView(view);
+            }
+        });
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), LiveStatus.class);
+                startActivity(i);
             }
         });
         layout.addView(view);
