@@ -38,32 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        // Step 1: Create a neat value object to hold the URL
-        URL url = null;
-        try {
-            url = new URL("https://api.thingspeak.com/channels/2080835/feeds.json?api_key=SPJO1DKYA6LX64QW&results=3");
-
-
-// Step 2: Open a connection(?) on the URL(??) and cast the response(???)
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-
-// Now it's "open", we can set the request method, headers etc.
-            connection.setRequestProperty("accept", "application/json");
-
-// This line makes the request
-//            InputStream responseStream = connection.getInputStream();
-
-// Step 3: Manually converting the response body InputStream to
-// APOD using Jackson
-//            ObjectMapper mapper = new ObjectMapper();
-
-//            APOD apod = mapper.readValue(responseStream, APOD.class);
-
-// Step 5: Finally, display the response we have
-//            System.out.println(responseStream);
-        }
-        catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        ThingspeakClient client = new ThingspeakClient();
+        client.execute("https://api.thingspeak.com/channels/2080835/feeds.json?api_key=SPJO1DKYA6LX64QW&results=3");
     }
 }
