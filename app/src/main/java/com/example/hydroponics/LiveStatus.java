@@ -1,18 +1,7 @@
 package com.example.hydroponics;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class LiveStatus extends AppCompatActivity {
@@ -20,5 +9,9 @@ public class LiveStatus extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.crop_live_statue);
+        String cropName = getIntent().getStringExtra("cropName");
+
+        TextView cropNameTextView = (TextView) findViewById(R.id.cropNameTextView);
+        cropNameTextView.setText(cropName);
     }
 }

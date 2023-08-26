@@ -77,6 +77,7 @@ public class ScrollActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), LiveStatus.class);
+                i.putExtra("cropName", name);
                 startActivity(i);
             }
         });
