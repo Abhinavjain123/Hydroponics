@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/green_accent"
+            android:background="@color/green_theme_background"
             android:gravity="center"
             android:padding="16dp"
             android:text="Hydroponic System Requirements"
@@ -125,8 +125,6 @@
             android:paddingStart="24dp"
             android:paddingEnd="24dp"
             android:text="Update"
-            android:textColor="@color/white"
-            android:textSize="19sp"
-            app:backgroundTint="@color/green_accent" />
+            android:textSize="19sp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

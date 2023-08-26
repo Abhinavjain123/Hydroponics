@@ -27,7 +27,7 @@
             android:layout_marginTop="26dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/app_name"
-            android:textColor="#43A047"
+            android:textColor="@color/green_accent"
             android:textSize="32sp" />
 
         <TextView
@@ -39,7 +39,7 @@
 
             android:gravity="center"
             android:text="@string/app_description"
-            android:textColor="#43A047"
+            android:textColor="@color/green_accent"
             android:textSize="20sp" />
 
         <LinearLayout
@@ -53,10 +53,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                app:backgroundTint="@color/green_accent"
                 android:text="@string/start_button"
                 android:layout_weight="1"
-                android:textColor="@color/white"
                 android:textSize="19sp" />
 
             <Button
@@ -66,10 +64,8 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginLeft="24dp"
                 android:text="Live Status"
-                android:textColor="@color/black"
                 android:textSize="19sp"
-                android:layout_weight="1"
-                app:backgroundTint="@color/green_theme_background" />
+                android:layout_weight="1" />
 
         </LinearLayout>
 
